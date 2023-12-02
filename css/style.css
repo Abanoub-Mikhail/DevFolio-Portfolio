@@ -1,0 +1,516 @@
+/* Start Variable */
+:root {
+--main-color:  #0078ff ;
+--light-color : white ;
+--transition: 0.4s all ;
+}
+
+
+/* End Variable */
+
+
+html,body {
+    scroll-behavior: smooth;
+    scroll-padding-top: 50px;
+}
+
+body{
+    background-color: hsl(0, 0%, 96%);
+}
+
+
+/* Start nav */
+
+.navbar-dark .navbar-nav .nav-link{
+    color: var(--light-color);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+nav.fixed-top {
+    background-color: #000000de;
+}
+li{
+    padding-right: 0.625rem;
+}
+
+ul a {
+    position: relative;
+}
+nav .active::before{
+    content: "";
+    height: 0.125rem;
+    width: 60%;
+    left: 0.5rem;
+    background-color:var(--light-color) ;
+    position: absolute;
+    bottom: 0;
+    transition-duration: .4s;
+}
+
+ul li a::before {
+    content: "";
+    height: 0.125rem;
+    width: 0%;
+    left: 0.5rem;
+    background-color:var(--light-color) ;
+    position: absolute;
+    bottom: 0;
+    transition-duration: .4s;
+}
+nav ul li a:hover::before
+{
+    width: 60%;
+}
+
+.sub-menu a{
+    text-decoration: none;
+}
+.sub-menu{
+    display: none;
+}
+
+.sub-menu a{
+    color: black;
+    text-align: center;
+}
+
+.hover-me:hover .sub-menu{
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 7.938rem;
+    background-color: #fff;
+    border-radius: 0.313rem;
+    padding: 0.313rem 0px;
+    width: 80%;
+    box-shadow: 0.063rem 0.063rem 0.625rem black;
+}
+.navbar-nav li a:hover{
+    color:var(--main-color);
+}
+
+.navbar-toggler {
+    border: 0;
+}
+
+@media screen and (max-width: 992px) {
+    nav ul li a:hover::before{
+    width: 10%;
+}
+nav .active::before {
+        width: 10%;
+    }
+}
+
+/* End nav */
+
+
+/*  Start Header Section  */
+
+#header {
+    background-image: url("../images/hero-bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#header .up-btn {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0062D3;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50%;
+    z-index: 12;
+    transition: var(--transition);
+}
+#header .up-btn:hover{
+    background-color:var(--main-color);
+}
+#header .up-btn a {
+    text-decoration: none;
+    color: var(--light-color);
+    padding: 10px;
+}
+
+#header .info h1 {
+    font-size: 3rem;
+}
+
+#header .info p {
+    font-size: 2.5rem;
+}
+#header .overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+}
+
+/*  End Header Section  */
+
+
+/*  Start About Section  */
+section.about{
+    padding: 3.75rem 0;
+}
+section.about .container {
+    box-shadow: 0 0 0.313rem rgba(0, 0, 0, 0.3);
+}
+section.about .information .info span {
+    font-weight: 600;
+    color: #1e1e1e;
+    font-size: 1.1rem;
+}
+
+section.about .data h5::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 0.188rem;
+    width: 6.25rem;
+    background-color: var(--main-color);
+}
+
+section.about .data p {
+    line-height: 30px;
+    font-size: 1.25;
+    color: hsl(210, 4%, 32%);
+}
+
+/*  End About Section  */
+
+
+
+
+
+/*  Start services Section  */
+
+section .header-text {
+    margin-bottom: 4rem;
+}
+
+section .header-text h3{
+    font-size: 3rem;
+    font-weight: 700;
+    color: #1e1e1e ;
+    text-transform: uppercase;
+} 
+section .header-text p {
+    color: #4E4E4E;
+    padding-bottom: 1.25rem;
+}
+
+section .header-text::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 0.313rem;
+    left: 50%;
+    width: 50px;
+    background-color: var(--main-color);
+    transform: translatex(-30px);
+}
+
+section.services .content {
+    padding-top: 40px;
+    transition: var(--transition);
+}
+
+
+section.services .content .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6.25rem;
+    width: 6.25rem;
+    border-radius: 50%;
+    margin: 0 auto;
+    box-shadow: 0 0 0 10px var(--main-color);
+    margin-bottom: 20px;
+    transition: var(--transition);
+}
+section.services .content .icon i {
+    color:  #1e1e1e;
+    font-size: 2.5rem;
+    transition: var(--transition);
+}
+
+section.services .content:hover .icon{
+    box-shadow: 0 0 0 10px #0077ff41;
+    background-color:  var(--main-color);
+}
+
+section.services .content:hover .icon i{
+    color: var(--light-color);
+}
+section.services .content {
+    box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
+}
+
+/*  End services Section  */
+
+
+/*  Start Achievements Section  */
+
+section.achievements {
+    background-image:url("../images/counters-bg.jpg") ;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 8rem 0;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.7;
+    background-color: var(--main-color);
+}
+
+section.achievements .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    margin: 0 auto;
+    border: 10px solid #cde1f8;
+    margin-bottom: 20px;
+}
+section.achievements .icon i {
+    color: var(--light-color);
+    font-size: 2rem;
+}
+
+/*  End Achievements Section  */
+
+
+
+/*  Start Portfolio Section  */
+section.portfolio .card {
+    box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
+}
+section.portfolio .content .text p {
+    font-size: 0.8rem;
+}
+
+section.portfolio .content .text span{
+    color: var(--main-color);
+}
+
+section.portfolio .content .icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 3px solid var(--main-color);
+    cursor: pointer;
+}
+section.portfolio .content .icon a {
+    font-size: 1.25rem;
+    text-decoration: none;
+}
+section.portfolio .card img{
+    transition: 1s all;
+}
+section.portfolio .card:hover img {
+    transform: scale(1.5);
+}
+
+/*  Start Portfolio Section  */
+
+
+
+/*  Start Team Section */
+
+section.team {
+    background-image: url("../images/overlay-bg.jpg");
+    background-position: center;
+    background-size: cover;
+    padding: 128px 0;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 0.625rem;
+    height: 0.625rem;
+    border-radius: 50%;
+    text-indent: 0;
+}
+.carousel-indicators {
+    position: static;
+}
+
+/*  End Team Section */
+
+
+
+
+/*  Start blog Section */
+
+section.blog .card {
+    box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
+}
+
+section.blog .card .text h6{
+    position: absolute;
+    text-align: center;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: var(--light-color);
+    font-size: 0.7rem;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+    background-color: var(--main-color);
+}
+
+section.blog .card .text a {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #1e1e1e;
+    transition: var(--transition);
+}
+section.blog .card .text a:hover,section.blog .card .footer .person:hover a{
+    color: var(--main-color);
+}
+
+section.blog .card .footer{
+    border-top: 1px solid rgba(0, 0, 0, 0.175);
+    background-color: hsl(0, 0%, 97%);
+}
+
+section.blog .card .footer .person img {
+    width: 1.875rem;
+    cursor: pointer;
+}
+section.blog .card .footer .person a {
+    color: #1e1e1e;
+    transition: var(--transition);
+}
+
+/*  End blog Section */
+
+
+
+/*  Start Message Section  */
+
+    section.message {
+        background-image: url("../images/overlay-bg.jpg");
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        padding: 80px 0;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    section.message .container {
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    section.message form input {
+        border: 1px solid hsl(210, 14%, 89%);
+    }
+
+    section.message h5::after{
+        content: "";
+        position: absolute;
+        height: 3px;
+        bottom: 0;
+        left: 0;
+        width: 20%;
+        background-color: var(--main-color);
+    }
+
+    section.message form .btn button {
+        background-color: var(--main-color);
+        border: none;
+        border-radius: 100px;
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        color: var(--light-color);
+        text-transform: capitalize;
+        transition:var(--transition);
+    }
+    section.message form textarea{
+        border: 1px solid hsl(210, 14%, 89%);
+    }
+    section.message form .btn button:hover {
+        background-color: hsl(212, 100%, 60%);
+        box-shadow: 0 0 0 5px hsl(212, 75%, 89%);
+    }
+    section.message form input:focus,section.message form textarea:focus {
+        border: 1px solid  var(--main-color);
+        box-shadow: 0 0 0 5px hsl(212, 75%, 89%);
+        outline: none !important;
+    }
+
+    section.message p {
+        font-size: 1.25rem;
+        font-weight: 300;
+    }
+
+    section.message li {
+        margin-bottom: 8px;
+    }
+    section.message li span {
+        color: var(--main-color);
+    }
+
+    section.message .social-icon .icon {
+        width: 40px;
+        height: 40px;
+        border: 2px solid var(--main-color);
+        margin-right: 15px;
+        transition: var(--transition);
+    }
+
+    section.message .social-icon .icon:hover{
+        background-color: var(--main-color);
+    }
+
+    section.message .social-icon a {
+        text-decoration: none;
+        color: #1e1e1e;
+        padding: 10px;
+        font-size: 1.2rem;
+        transition: var(--transition);
+    }
+
+    section.message .social-icon .icon:hover a {
+        color: var(--light-color);
+    }
+
+/*  End Message Section  */
+
+
+/*  Start Footer Section  */
+
+    footer {
+        color: var(--light-color);
+        background-color: #0062D3;
+        padding: 20px 0;
+        text-align: center;
+    }
+    footer p a {
+        text-decoration: none;
+        color: var(--light-color);
+    }
+    
+
+/*  End Footer Section  */
+
+
+
+
